@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteCompileService1", "RemoteCompileService1\RemoteCompileService1.csproj", "{00D9118D-4569-431E-9748-12309FEB3D77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{C0377089-5900-427A-AEBC-2941EEB29909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{40E98264-350A-4115-9F65-4B45FD3BC6D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00D9118D-4569-431E-9748-12309FEB3D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D9118D-4569-431E-9748-12309FEB3D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D9118D-4569-431E-9748-12309FEB3D77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D9118D-4569-431E-9748-12309FEB3D77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0377089-5900-427A-AEBC-2941EEB29909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0377089-5900-427A-AEBC-2941EEB29909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0377089-5900-427A-AEBC-2941EEB29909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0377089-5900-427A-AEBC-2941EEB29909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40E98264-350A-4115-9F65-4B45FD3BC6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40E98264-350A-4115-9F65-4B45FD3BC6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40E98264-350A-4115-9F65-4B45FD3BC6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40E98264-350A-4115-9F65-4B45FD3BC6D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2480d7ed-74a3-4adb-b3cd-f397743ffbd7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.1.2:8000/RemoteCompileService1" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="remotecompiler1.wsdl" MetadataType="Wsdl" ID="e7b501e2-7b3e-447b-a828-85e3e46f7ab1" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="1697ce70-920a-4087-8535-04936106110b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+    <MetadataFile FileName="remotecompiler1.xsd" MetadataType="Schema" ID="612c23ca-5815-4603-ab4c-a758ea1d0129" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5671d440-3ee2-4c39-8459-2bb8cf56042b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+    <MetadataFile FileName="System.IO.xsd" MetadataType="Schema" ID="1b49c937-90ad-4b25-97dd-194d5a09c81b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="32066b7c-4baa-4ded-9da3-b23893195c1f" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

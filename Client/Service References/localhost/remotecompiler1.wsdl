@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://remotecompiler" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://remotecompiler" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://remotecompiler/Imports">
+      <xsd:import namespace="http://remotecompiler" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRemoteCompileService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteCompileService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteCompileService1_ExecuteCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteCommand" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteCompileService1_ExecuteCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteCompileService1_Compile_InputMessage">
+    <wsdl:part name="parameters" element="tns:Compile" />
+  </wsdl:message>
+  <wsdl:message name="IRemoteCompileService1_Compile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompileResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRemoteCompileService1">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://remotecompiler/IRemoteCompileService1/GetData" message="tns:IRemoteCompileService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://remotecompiler/IRemoteCompileService1/GetDataResponse" message="tns:IRemoteCompileService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCommand">
+      <wsdl:input wsaw:Action="http://remotecompiler/IRemoteCompileService1/ExecuteCommand" message="tns:IRemoteCompileService1_ExecuteCommand_InputMessage" />
+      <wsdl:output wsaw:Action="http://remotecompiler/IRemoteCompileService1/ExecuteCommandResponse" message="tns:IRemoteCompileService1_ExecuteCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Compile">
+      <wsdl:input wsaw:Action="http://remotecompiler/IRemoteCompileService1/Compile" message="tns:IRemoteCompileService1_Compile_InputMessage" />
+      <wsdl:output wsaw:Action="http://remotecompiler/IRemoteCompileService1/CompileResponse" message="tns:IRemoteCompileService1_Compile_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
