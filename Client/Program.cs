@@ -12,6 +12,13 @@ namespace Client
         static void Main(string[] args)
         {
 
+            //WAŻNE!!! ŻEBY DZIAŁAŁO, ZMIEŃ IP W app.conf zarówno w projekcie Client, jak i Host!!!
+            //NASTĘPNIE... Uruchom Host, i w Service References ->localhost -> Update...
+
+            //PS. ten kod to gówno!!!
+            //                              ale działa...(u mnie coś bardzo wolno, z powodu wolnego g++)
+
+
             localhost.RemoteCompileService1Client proxy = new Client.localhost.RemoteCompileService1Client();
 
             Console.WriteLine("1:Commands");
@@ -41,10 +48,12 @@ namespace Client
                 if (File.Exists(sciezka))
                 {
                     string filename = Path.GetFileNameWithoutExtension(sciezka);
-                                    
-                    //string kod = File.ReadAllText(sciezka);
 
-                    FileStream kod = File.OpenRead(sciezka);
+                    //FileStream kod = File.OpenRead(sciezka);
+                    
+                    string kod = File.ReadAllText(sciezka);
+
+                    
                     
 
 

@@ -22,7 +22,7 @@ namespace Client.localhost {
         string ExecuteCommand(string prog);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://remotecompiler/IRemoteCompileService1/Compile", ReplyAction="http://remotecompiler/IRemoteCompileService1/CompileResponse")]
-        string Compile(System.IO.FileStream code, string filename);
+        string Compile(string code, string filename);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]
@@ -60,7 +60,7 @@ namespace Client.localhost {
             return base.Channel.ExecuteCommand(prog);
         }
         
-        public string Compile(System.IO.FileStream code, string filename) {
+        public string Compile(string code, string filename) {
             return base.Channel.Compile(code, filename);
         }
     }

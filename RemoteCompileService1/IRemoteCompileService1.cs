@@ -19,7 +19,7 @@ namespace RemoteCompileService1
         string ExecuteCommand(string prog);
 
         [OperationContract]
-        string Compile(FileStream code, string filename);
+        string Compile(string code, string filename);
 
 
         // TODO: Add your service operations here

@@ -9,20 +9,33 @@ using System.IO;
 
 namespace RemoteCompileService1
 {
-    // NOTE: If you change the class name "Service1" here, you must also update the reference to "Service1" in App.config.
+    //WAŻNE!!! ŻEBY DZIAŁAŁO, ZMIEŃ IP W app.conf zarówno w projekcie Client, jak i Host!!!
+    //NASTĘPNIE... Uruchom Host, i w Service References ->localhost -> Update...
+
+    //PS. ten kod to gówno!!!
+    //                              ale działa...(u mnie coś bardzo wolno, z powodu wolnego g++)
+
+
     public class RemoteCompileService1 : IRemoteCompileService1
     {
-        public string GetData(int value)
+        public string GetData(int value)//Przykładowa funkcja wygenerowana automatycznie, nie potrzebna
         {
             return string.Format("You entered: {0}", value);
         }
 
         public string ExecuteCommand(string prog)
         {
+            //Pozwala na uruchamianie zdalne komend, np. ipconfig
 
+
+            var polecenie = prog.Split(' ');
+
+
+            
             ProcessStartInfo psi = new ProcessStartInfo
             {
-                FileName=prog,
+                FileName=polecenie[0],
+               // Arguments = polecenie[1],
                 RedirectStandardOutput = true,
                 UseShellExecute = false
 
@@ -42,7 +55,7 @@ namespace RemoteCompileService1
 
         }
 
-        public string Compile(FileStream code, string filename)
+        public string Compile(string code, string filename)
         {
 
             string fexe = filename + ".exe";
@@ -63,6 +76,8 @@ namespace RemoteCompileService1
             string main_raport_path = directory + "main_raport.txt";
 
 
+            File.WriteAllText(filepath, code);
+
 
             //using (FileStream fs = System.IO.File.Create(filepath,(int)code.Length))
             //{
@@ -73,19 +88,19 @@ namespace RemoteCompileService1
             
 
 
-            FileStream fs = System.IO.File.Create(filepath, (int)code.Length);
-            byte[] xcode = new byte[fs.Length];
-            fs.Read(xcode, 0, (int)fs.Length);
+            //FileStream fs = System.IO.File.Create(filepath, (int)code.Length);
+            //byte[] xcode = new byte[fs.Length];
+            //fs.Read(xcode, 0, (int)fs.Length);
 
-            fs.Write(xcode, 0, (int)xcode.Length);
+            //fs.Write(xcode, 0, (int)xcode.Length);
 
             
-            
+            //Nie działa z FileStream :(
 
 
 
 
-            string arguments = "\"" + filepath + "\"" + " -o " + "\"" + outputfilepath + "\""; // +" 2>" + "\"" + raportpath + "\"";
+            string arguments = "\"" + filepath + "\"" + " -o " + "\"" + outputfilepath + "\"";   // +" 2>" + "\"" + raportpath + "\""; 
 
 
             ProcessStartInfo csi = new ProcessStartInfo
@@ -101,9 +116,13 @@ namespace RemoteCompileService1
             Process c = Process.Start(csi);
             c.WaitForExit();
             string gppoutput = c.StandardOutput.ReadToEnd();
+            //Tu jest problem, g++ nie daje nic do zmiennej gppoutput
 
 
 
+
+
+            //Prowizoryczne generowanie raportów(straszne...ale działa)
             if (!File.Exists(outputfilepath))
             {
                 string error = "Kompilacja pliku nie powiodła się!!!";
@@ -145,9 +164,7 @@ namespace RemoteCompileService1
 
 
 
-
-
-
-
+        //To już jest koniec...
+        
     }
 }

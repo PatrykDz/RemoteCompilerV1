@@ -80,8 +80,6 @@
     <None Include="Service References\localhost\remotecompiler1.xsd" />
     <None Include="Service References\localhost\service1.wsdl" />
     <None Include="Service References\localhost\service1.xsd" />
-    <None Include="Service References\localhost\System.IO.xsd" />
-    <None Include="Service References\localhost\System.xsd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

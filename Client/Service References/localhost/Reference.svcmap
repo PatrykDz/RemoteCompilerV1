@@ -24,8 +24,6 @@
     <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="1697ce70-920a-4087-8535-04936106110b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
     <MetadataFile FileName="remotecompiler1.xsd" MetadataType="Schema" ID="612c23ca-5815-4603-ab4c-a758ea1d0129" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5671d440-3ee2-4c39-8459-2bb8cf56042b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
-    <MetadataFile FileName="System.IO.xsd" MetadataType="Schema" ID="1b49c937-90ad-4b25-97dd-194d5a09c81b" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
-    <MetadataFile FileName="System.xsd" MetadataType="Schema" ID="32066b7c-4baa-4ded-9da3-b23893195c1f" SourceId="1" SourceUrl="http://192.168.1.2:8000/RemoteCompileService1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
